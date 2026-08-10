@@ -11,6 +11,7 @@ export default defineConfig({
 			title: 'Épargne',
 			description: "Site d'information sur l'épargne.",
 			pagefind: false,
+			customCss: ['./src/styles/starlight.css'],
 			components: {
 				Header: './src/components/Header.astro',
 				ThemeProvider: './src/components/LightThemeProvider.astro',

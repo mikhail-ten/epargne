@@ -1,0 +1,5 @@
+@media (min-width: 72rem) {
+	html[data-has-sidebar][data-has-toc] .main-pane {
+		--sl-content-margin-inline: 1.5rem auto;
+	}
+}
