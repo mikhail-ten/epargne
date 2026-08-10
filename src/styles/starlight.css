@@ -1,5 +1,18 @@
 @media (min-width: 72rem) {
+	html[data-has-sidebar][data-has-toc] {
+		--sl-content-width: 64rem;
+	}
+
 	html[data-has-sidebar][data-has-toc] .main-pane {
-		--sl-content-margin-inline: 1.5rem auto;
+		--sl-content-margin-inline: 0;
+		flex: 0 0
+			min(
+				calc(var(--sl-content-width) + var(--sl-content-pad-x) + var(--sl-content-pad-x)),
+				calc(100% - var(--sl-sidebar-width))
+			);
+		width: min(
+			calc(var(--sl-content-width) + var(--sl-content-pad-x) + var(--sl-content-pad-x)),
+			calc(100% - var(--sl-sidebar-width))
+		);
 	}
 }
