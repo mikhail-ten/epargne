@@ -27,26 +27,32 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'Bases financières',
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'bases-financieres' } }],
 				},
 				{
 					label: 'Études académiques',
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'etudes-academiques' } }],
 				},
 				{
 					label: 'Planification de la retraite',
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'planification-retraite' } }],
 				},
 				{
 					label: 'Produits disponibles',
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'produits-disponibles' } }],
 				},
 				{
 					label: "Enveloppes d'investissement",
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'enveloppes-investissement' } }],
 				},
 				{
 					label: 'Épargne salariale',
+					collapsed: true,
 					items: [{ autogenerate: { directory: 'epargne-salariale' } }],
 				},
 			],
