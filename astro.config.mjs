@@ -19,15 +19,28 @@ export default defineConfig({
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/mikhail-ten/epargne' }],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: "Guide d'exemple", slug: 'guides/example' },
-					],
+					label: 'Bases financières',
+					items: [{ autogenerate: { directory: 'bases-financieres' } }],
 				},
 				{
-					label: 'Référence',
-					items: [{ autogenerate: { directory: 'reference' } }],
+					label: 'Études académiques',
+					items: [{ autogenerate: { directory: 'etudes-academiques' } }],
+				},
+				{
+					label: 'Planification de la retraite',
+					items: [{ autogenerate: { directory: 'planification-retraite' } }],
+				},
+				{
+					label: 'Produits disponibles',
+					items: [{ autogenerate: { directory: 'produits-disponibles' } }],
+				},
+				{
+					label: "Enveloppes d'investissement",
+					items: [{ autogenerate: { directory: 'enveloppes-investissement' } }],
+				},
+				{
+					label: 'Épargne salariale',
+					items: [{ autogenerate: { directory: 'epargne-salariale' } }],
 				},
 			],
 		}),

@@ -1,0 +1,51 @@
+---
+title: Construire un budget d'épargne
+description: Organiser les flux mensuels pour rendre l'épargne régulière et soutenable.
+sidebar:
+  order: 3
+---
+
+import { Aside, Card, CardGrid } from '@astrojs/starlight/components';
+
+Un budget d'épargne sert à décider à l'avance quelle part des revenus finance le présent, les imprévus et les projets futurs. Il ne s'agit pas seulement de réduire les dépenses, mais de rendre les arbitrages visibles.
+
+<CardGrid>
+	<Card title="Revenus" icon="wallet">
+		Salaires, primes, revenus indépendants, revenus patrimoniaux.
+	</Card>
+	<Card title="Dépenses contraintes" icon="document">
+		Logement, alimentation, assurances, transport, remboursements.
+	</Card>
+	<Card title="Épargne" icon="seti:config">
+		Versements automatiques, projets, précaution, investissement long terme.
+	</Card>
+</CardGrid>
+
+## Une structure simple
+
+| Poste | Rôle | Fréquence de revue |
+| :-- | :-- | :-- |
+| Dépenses fixes | Mesurer le socle incompressible | 1 à 2 fois par an |
+| Dépenses variables | Identifier les marges de manoeuvre | Chaque mois |
+| Épargne de précaution | Absorber les imprévus | Après chaque retrait |
+| Investissement | Financer le long terme | Trimestriel ou semestriel |
+
+<Aside type="tip" title="Automatiser sans rigidifier">
+	Un virement automatique en début de mois aide à tenir le cap. Il doit rester ajustable si les revenus ou les charges changent.
+</Aside>
+
+## Exemple de routine mensuelle
+
+1. Vérifier les revenus réellement reçus.
+2. Mettre à jour les dépenses exceptionnelles.
+3. Alimenter l'épargne de précaution si elle est sous le seuil choisi.
+4. Répartir le reste entre projets et investissement.
+5. Noter ce qui devra être modifié le mois suivant.
+
+## À personnaliser
+
+Vous pouvez ajouter ici un tableau de suivi, un lien vers un fichier de budget ou un composant Astro maison qui calcule automatiquement le taux d'épargne.
+
+```mdx
+{/* Exemple futur : <SavingsRate income={3000} savings={450} /> */}
+```

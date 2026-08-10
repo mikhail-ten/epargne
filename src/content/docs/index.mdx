@@ -1,17 +1,46 @@
 ---
 title: Épargne
-description: Des repères clairs pour comprendre, organiser et faire progresser son épargne.
+description: Une base documentaire pour comprendre, organiser et investir son épargne.
 template: splash
 hero:
-  title: Construire son épargne avec méthode
-  tagline: |
-    <p>La crise démographique et les difficultés de nos politiques à redresser les comptes publics menacent directement la pérennité de notre système de retraite par répartition. Face à cette incertitude, il devient essentiel de ne plus dépendre exclusivement de ce système et de bâtir nous-mêmes un second pilier de retraite par capitalisation.</p>
-    <p>Ce site a pour objectif de sensibiliser les salariés d’AREP aux finances personnelles, en s’appuyant notamment sur les travaux académiques de lauréats du prix Nobel, et de mettre en lumière le potentiel encore largement inexploité de l’épargne salariale chez AREP.</p>
+  tagline: Comprendre les bases, choisir ses enveloppes, préparer ses projets.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Commencer par les bases
+      link: bases-financieres/definir-ses-objectifs/
+      icon: right-arrow
+    - text: Voir les produits
+      link: produits-disponibles/livrets-et-fonds-euros/
+      icon: document
+      variant: minimal
 ---
 
-import HomeHero from '../../components/HomeHero.astro';
-import HomeFeatureGrid from '../../components/HomeFeatureGrid.astro';
+import { Aside, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-<HomeHero />
+## Sommaire
 
-<HomeFeatureGrid />
+Ce site est organisé comme une documentation progressive : les premières pages posent les notions de base, puis les chapitres avancent vers les produits, les enveloppes et les décisions de long terme.
+
+<Aside type="note" title="Contenu de départ">
+	Ces pages sont des brouillons pédagogiques. Elles donnent une structure, un ton et des exemples de composants MDX que vous pourrez adapter ensuite.
+</Aside>
+
+<CardGrid>
+	<LinkCard title="Bases financières" href="bases-financieres/definir-ses-objectifs/" description="Objectifs, horizon de placement, budget et relation risque-rendement." />
+	<LinkCard title="Études académiques" href="etudes-academiques/diversification-et-frontiere-efficiente/" description="Diversification, gestion passive, facteurs de risque et comportements." />
+	<LinkCard title="Planification de la retraite" href="planification-retraite/estimer-son-besoin/" description="Besoin futur, allocation dans le temps et décumulation." />
+	<LinkCard title="Produits disponibles" href="produits-disponibles/livrets-et-fonds-euros/" description="Livrets, fonds euros, ETF, obligations, immobilier et produits complexes." />
+	<LinkCard title="Enveloppes d'investissement" href="enveloppes-investissement/compte-titres-ordinaire/" description="Compte-titres, PEA, assurance-vie et PER." />
+	<LinkCard title="Épargne salariale" href="epargne-salariale/participation-interessement-abondement/" description="Participation, intéressement, plans d'entreprise et choix des fonds." />
+</CardGrid>
+
+## Méthode de lecture
+
+1. Commencez par clarifier votre horizon et vos objectifs.
+2. Identifiez les produits et enveloppes adaptés à chaque horizon.
+3. Revenez régulièrement aux pages de suivi pour vérifier les frais, les risques et la cohérence d'ensemble.
+
+:::caution[À personnaliser]
+Les contenus ne constituent pas un conseil financier individualisé. Les règles fiscales, les plafonds et les taux peuvent changer : vérifiez toujours les sources officielles avant publication définitive.
+:::
