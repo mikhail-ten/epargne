@@ -1,0 +1,94 @@
+<style is:global>
+	html[data-has-hero] {
+		--sl-content-width: 92rem;
+	}
+
+	html[data-has-hero] .hero {
+		display: block;
+		padding-block: 4.5rem 3rem;
+	}
+
+	html[data-has-hero] .hero > img,
+	html[data-has-hero] .hero > .hero-html {
+		display: none;
+	}
+
+	html[data-has-hero] .hero .stack,
+	html[data-has-hero] .hero .copy {
+		align-items: center;
+		text-align: center;
+	}
+
+	html[data-has-hero] .hero .copy {
+		gap: 1.35rem;
+	}
+
+	html[data-has-hero] .hero h1 {
+		width: min(100%, 18em);
+		max-width: none;
+		margin-inline: auto;
+		font-size: 2.85rem;
+		font-weight: 700;
+		letter-spacing: 0;
+		line-height: 1.02;
+		text-wrap: balance;
+	}
+
+	html[data-has-hero] .hero .tagline {
+		width: min(100%, 64rem);
+		max-width: none;
+		margin-inline: auto;
+		color: var(--sl-color-gray-2);
+		font-size: 1.1rem;
+		line-height: 1.65;
+		text-align: start;
+		text-wrap: pretty;
+	}
+
+	html[data-has-hero] .hero .tagline p {
+		margin: 0;
+	}
+
+	html[data-has-hero] .hero .tagline p + p {
+		margin-top: 1rem;
+	}
+
+	@media (min-width: 50rem) {
+		html[data-has-hero] .hero {
+			grid-template-columns: 1fr;
+			padding-block: 7rem 4.25rem;
+		}
+
+		html[data-has-hero] .hero .stack,
+		html[data-has-hero] .hero .copy {
+			align-items: center;
+			text-align: center;
+		}
+
+		html[data-has-hero] .hero h1 {
+			width: min(100%, 19em);
+			font-size: 4.25rem;
+		}
+
+		html[data-has-hero] .hero .tagline {
+			width: min(100%, 76rem);
+			font-size: 1.28rem;
+		}
+	}
+
+	@media (min-width: 72rem) {
+		html[data-has-hero] .hero .tagline {
+			width: min(100%, 82rem);
+		}
+	}
+
+	@media (min-width: 72rem) {
+		html[data-has-hero] .hero {
+			padding-block: 8.5rem 5rem;
+		}
+
+		html[data-has-hero] .hero h1 {
+			font-size: 4.75rem;
+		}
+	}
+</style>

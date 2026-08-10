@@ -1,40 +1,17 @@
 ---
-title: Bienvenue dans Starlight
-description: Démarrer un site documentaire avec Starlight.
-template: splash # Supprimez ou commentez cette ligne pour afficher la barre latérale sur cette page.
+title: Épargne
+description: Des repères clairs pour comprendre, organiser et faire progresser son épargne.
+template: splash
 hero:
-  tagline: Template Starlight officiel prêt à être adapté pour Épargne.
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Guide d'exemple
-      link: /epargne/guides/example/
-      icon: right-arrow
-    - text: Lire la documentation Starlight
-      link: https://starlight.astro.build
-      icon: external
-      variant: minimal
+  title: Construire son épargne avec méthode
+  tagline: |
+    <p>La crise démographique et les difficultés de nos politiques à redresser les comptes publics menacent directement la pérennité de notre système de retraite par répartition. Face à cette incertitude, il devient essentiel de ne plus dépendre exclusivement de ce système et de bâtir nous-mêmes un second pilier de retraite par capitalisation.</p>
+    <p>Ce site a pour objectif de sensibiliser les salariés d’AREP aux finances personnelles, en s’appuyant notamment sur les travaux académiques de lauréats du prix Nobel, et de mettre en lumière le potentiel encore largement inexploité de l’épargne salariale chez AREP.</p>
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import HomeHero from '../../components/HomeHero.astro';
+import HomeFeatureGrid from '../../components/HomeFeatureGrid.astro';
 
-## Prochaines étapes
+<HomeHero />
 
-<CardGrid stagger>
-	<Card title="Modifier le contenu" icon="pencil">
-		Modifiez `src/content/docs/index.mdx` pour faire évoluer cette page.
-	</Card>
-	<Card title="Changer la mise en page" icon="document">
-		Supprimez `template: splash` dans `src/content/docs/index.mdx` pour afficher la
-		barre latérale sur cette page.
-	</Card>
-	<Card title="Ajouter du contenu" icon="add-document">
-		Ajoutez des fichiers Markdown ou MDX dans `src/content/docs` pour créer de nouvelles pages.
-	</Card>
-	<Card title="Configurer le site" icon="setting">
-		Modifiez la barre latérale et les autres options dans `astro.config.mjs`.
-	</Card>
-	<Card title="Lire la documentation" icon="open-book">
-		Consultez [la documentation Starlight](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+<HomeFeatureGrid />
