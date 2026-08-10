@@ -10,6 +10,12 @@ export default defineConfig({
 		starlight({
 			title: 'Épargne',
 			description: "Site d'information sur l'épargne.",
+			pagefind: false,
+			components: {
+				Header: './src/components/Header.astro',
+				ThemeProvider: './src/components/LightThemeProvider.astro',
+				ThemeSelect: './src/components/EmptyThemeSelect.astro',
+			},
 			locales: {
 				root: {
 					label: 'Français',
