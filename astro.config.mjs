@@ -14,6 +14,7 @@ export default defineConfig({
 			customCss: ['./src/styles/starlight.css'],
 			components: {
 				Header: './src/components/Header.astro',
+				Sidebar: './src/components/Sidebar.astro',
 				ThemeProvider: './src/components/LightThemeProvider.astro',
 				ThemeSelect: './src/components/EmptyThemeSelect.astro',
 			},
