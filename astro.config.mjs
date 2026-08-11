@@ -24,7 +24,6 @@ export default defineConfig({
 					lang: 'fr-FR',
 				},
 			},
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/mikhail-ten/epargne' }],
 			sidebar: [
 				{
 					label: 'Bases financières',

@@ -112,7 +112,7 @@ const features = [
 
 	.home-features h2 {
 		margin: 0;
-		color: var(--sl-color-white);
+		color: var(--brand-ink);
 		font-size: 2.35rem;
 		font-weight: 700;
 		letter-spacing: 0;
@@ -162,30 +162,48 @@ const features = [
 	.feature-card {
 		position: relative;
 		display: flex;
+		overflow: hidden;
 		min-height: 17rem;
 		flex-direction: column;
 		gap: 1rem;
-		border: 1px solid var(--sl-color-gray-5);
+		border: 1px solid var(--brand-line);
 		border-radius: 0.5rem;
-		background: color-mix(in srgb, var(--sl-color-black) 86%, var(--sl-color-gray-6));
+		background: var(--brand-paper);
 		padding: 1.6rem;
-		box-shadow: 0 1rem 2.5rem rgb(0 0 0 / 16%);
+		box-shadow: 0 0.8rem 2rem rgb(0 0 0 / 6%);
 		text-decoration: none;
 		transition:
+			background-color 160ms ease,
 			border-color 160ms ease,
 			box-shadow 160ms ease,
 			transform 160ms ease;
 	}
 
+	.feature-card::before {
+		position: absolute;
+		inset: 0 0 auto;
+		height: 0.18rem;
+		background: var(--brand-red);
+		content: '';
+		opacity: 0;
+		transition: opacity 160ms ease;
+	}
+
 	.feature-card:hover,
 	.feature-card:focus-visible {
-		border-color: var(--sl-color-gray-3);
-		box-shadow: 0 1.2rem 3rem rgb(0 0 0 / 22%);
+		border-color: var(--brand-red-border);
+		background-color: color-mix(in srgb, var(--brand-paper) 94%, var(--brand-red));
+		box-shadow: 0 1rem 2.4rem rgb(0 0 0 / 10%);
 		transform: translateY(-0.125rem);
 	}
 
+	.feature-card:hover::before,
+	.feature-card:focus-visible::before {
+		opacity: 1;
+	}
+
 	.feature-card:focus-visible {
-		outline: 2px solid var(--sl-color-accent-high);
+		outline: 2px solid var(--brand-red);
 		outline-offset: 3px;
 	}
 
@@ -203,14 +221,14 @@ const features = [
 
 	.feature-title {
 		margin-top: 0.55rem;
-		color: var(--sl-color-white);
+		color: var(--brand-ink);
 		font-size: 1.35rem;
 		font-weight: 700;
 		line-height: 1.2;
 	}
 
 	.feature-description {
-		color: var(--sl-color-gray-2);
+		color: var(--brand-muted);
 		font-size: 1rem;
 		line-height: 1.65;
 	}
@@ -220,7 +238,7 @@ const features = [
 		align-items: center;
 		gap: 0.45rem;
 		margin-top: auto;
-		color: var(--sl-color-accent-high);
+		color: var(--brand-red);
 		font-size: 0.95rem;
 		font-weight: 700;
 	}
