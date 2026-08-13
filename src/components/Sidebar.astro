@@ -123,6 +123,21 @@ const { sidebar } = Astro.locals.starlightRoute;
 	requestAnimationFrame(() => {
 		document.documentElement.classList.add('sidebar-accordion-ready');
 	});
+
+	const desktopSidebarQuery = window.matchMedia('(min-width: 80rem)');
+	const closeMobileSidebarAtDesktop = () => {
+		if (!desktopSidebarQuery.matches) return;
+		const menuButton = document.querySelector<HTMLElement>('starlight-menu-button');
+		menuButton?.setAttribute('aria-expanded', 'false');
+		menuButton?.querySelector('button')?.setAttribute('aria-expanded', 'false');
+		document.body.removeAttribute('data-mobile-menu-expanded');
+		document.querySelectorAll<HTMLElement>('.main-frame, .sl-skip-link').forEach((element) => {
+			element.removeAttribute('inert');
+		});
+	};
+
+	desktopSidebarQuery.addEventListener('change', closeMobileSidebarAtDesktop);
+	closeMobileSidebarAtDesktop();
 </script>
 
 <div class="md:sl-hidden">
