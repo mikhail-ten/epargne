@@ -76,7 +76,6 @@ const hasImage = Boolean(imageSrc);
 	.research-teaching-copy {
 		display: grid;
 		min-width: 0;
-		gap: 1rem;
 	}
 
 	.research-teaching-label,
@@ -86,6 +85,7 @@ const hasImage = Boolean(imageSrc);
 	}
 
 	.research-teaching-label {
+		margin-bottom: 0.18rem;
 		color: var(--research-card-kicker);
 		font-size: 0.78rem;
 		font-weight: 700;
@@ -95,8 +95,6 @@ const hasImage = Boolean(imageSrc);
 	}
 
 	.research-teaching-text {
-		font-size: clamp(1.05rem, 1.2vw, 1.28rem);
-		line-height: 1.55;
 		text-wrap: pretty;
 	}
 
@@ -109,6 +107,7 @@ const hasImage = Boolean(imageSrc);
 	}
 
 	.research-teaching-source {
+		margin-top: 1rem;
 		border-top: 1px solid color-mix(in srgb, var(--research-card-border) 82%, #ffffff);
 		padding-top: 0.9rem;
 		color: var(--research-card-muted);
