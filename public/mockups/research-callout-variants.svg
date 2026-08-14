@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1500" viewBox="0 0 1800 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Variantes de composante Astro pour enseignement de papier de recherche</title>
+  <desc id="desc">Six propositions de bloc editorial rempli avec la couleur cad3dd, avec source en petit et option image.</desc>
+  <defs>
+    <style>
+      .page-bg { fill: #ffffff; }
+      .title { font-family: Georgia, "Times New Roman", serif; font-size: 46px; font-weight: 700; fill: #090909; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 20px; fill: #5f5f5f; }
+      .label { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #262626; }
+      .label-note { font-family: Arial, sans-serif; font-size: 15px; fill: #5f5f5f; }
+      .card { fill: #cad3dd; stroke: #aeb9c4; stroke-width: 1.5; }
+      .paper { fill: #ffffff; stroke: #b8c1cb; stroke-width: 1; }
+      .soft { fill: #eef2f5; }
+      .ink { fill: #262626; }
+      .muted { fill: #4f5963; }
+      .red { fill: #d71b1b; }
+      .teal { fill: #1a515d; }
+      .eyebrow { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 1px; fill: #1a515d; }
+      .body { font-family: Arial, sans-serif; font-size: 24px; line-height: 1.35; fill: #262626; }
+      .body-tight { font-family: Arial, sans-serif; font-size: 23px; line-height: 1.35; fill: #262626; }
+      .body-serif { font-family: Georgia, "Times New Roman", serif; font-size: 27px; line-height: 1.35; fill: #262626; }
+      .source { font-family: Arial, sans-serif; font-size: 16px; fill: #4f5963; }
+      .source-strong { font-weight: 700; fill: #262626; }
+      .small { font-family: Arial, sans-serif; font-size: 14px; fill: #4f5963; }
+      .slot { fill: #e7edf2; stroke: #9eabb7; stroke-width: 1.5; stroke-dasharray: 8 7; }
+      .slot-text { font-family: Arial, sans-serif; font-size: 13px; fill: #5f6a74; }
+      .quote { font-family: Georgia, "Times New Roman", serif; font-size: 92px; fill: #d71b1b; opacity: 0.82; }
+      .shadow { filter: drop-shadow(0 12px 22px rgb(0 0 0 / 0.08)); }
+    </style>
+    <linearGradient id="graphFill" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#eef2f5" stop-opacity="0.92"/>
+    </linearGradient>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.2" fill="#9eabb7" opacity="0.55"/>
+    </pattern>
+  </defs>
+
+  <rect class="page-bg" width="1800" height="1500"/>
+  <text x="90" y="82" class="title">Composante Astro - enseignement d'un papier de recherche</text>
+  <text x="92" y="122" class="subtitle">Fond du bloc: #cad3dd. Texte principal: un paragraphe. Source discr&#232;te. Image optionnelle.</text>
+
+  <!-- Variant 1 -->
+  <g id="variant-1" class="shadow">
+    <text x="90" y="174" class="label">1. Cartouche &#233;ditorial</text>
+    <text x="328" y="174" class="label-note">sans image, tr&#232;s lisible dans un article</text>
+    <rect x="90" y="196" width="780" height="330" rx="8" class="card"/>
+    <rect x="90" y="196" width="8" height="330" rx="4" class="red"/>
+    <text x="126" y="246" class="eyebrow">ENSEIGNEMENT</text>
+    <text x="126" y="297" class="body">
+      <tspan x="126" dy="0">Un r&#233;sultat de recherche n'est utile que s'il</tspan>
+      <tspan x="126" dy="33">change une d&#233;cision concr&#232;te : ici,</tspan>
+      <tspan x="126" dy="33">l'investisseur gagne surtout &#224; r&#233;duire les frais</tspan>
+      <tspan x="126" dy="33">et &#224; rester diversifi&#233;.</tspan>
+    </text>
+    <line x1="126" y1="446" x2="520" y2="446" stroke="#aeb9c4" stroke-width="1"/>
+    <text x="126" y="480" class="source">
+      <tspan class="source-strong">The Arithmetic of Active Management</tspan>
+      <tspan> - William F. Sharpe</tspan>
+    </text>
+  </g>
+
+  <!-- Variant 2 -->
+  <g id="variant-2" class="shadow">
+    <text x="930" y="174" class="label">2. Vignette lat&#233;rale</text>
+    <text x="1148" y="174" class="label-note">image optionnelle &#224; gauche</text>
+    <rect x="930" y="196" width="780" height="330" rx="8" class="card"/>
+    <rect x="964" y="230" width="182" height="182" rx="8" fill="url(#graphFill)" stroke="#aeb9c4" stroke-width="1.4"/>
+    <rect x="986" y="374" width="132" height="12" rx="6" class="soft"/>
+    <polyline points="986,343 1017,322 1048,333 1079,292 1114,273" fill="none" stroke="#1a515d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="986" cy="343" r="5" class="teal"/>
+    <circle cx="1017" cy="322" r="5" class="teal"/>
+    <circle cx="1048" cy="333" r="5" class="teal"/>
+    <circle cx="1079" cy="292" r="5" class="teal"/>
+    <circle cx="1114" cy="273" r="5" class="red"/>
+    <text x="996" y="257" class="slot-text">image / graphique</text>
+    <text x="1184" y="246" class="eyebrow">ENSEIGNEMENT</text>
+    <text x="1184" y="294" class="body">
+      <tspan x="1184" dy="0">Le papier ne dit pas seulement</tspan>
+      <tspan x="1184" dy="33">quoi penser du march&#233; : il aide</tspan>
+      <tspan x="1184" dy="33">&#224; choisir un comportement</tspan>
+      <tspan x="1184" dy="33">moins fragile dans la dur&#233;e.</tspan>
+    </text>
+    <text x="1184" y="454" class="source">
+      <tspan class="source-strong">A Random Walk Down Wall Street</tspan>
+      <tspan> - Burton G. Malkiel</tspan>
+    </text>
+  </g>
+
+  <!-- Variant 3 -->
+  <g id="variant-3" class="shadow">
+    <text x="90" y="594" class="label">3. Bloc compact</text>
+    <text x="254" y="594" class="label-note">pour insertion au fil du texte</text>
+    <rect x="90" y="616" width="780" height="300" rx="8" class="card"/>
+    <rect x="122" y="650" width="96" height="30" rx="15" fill="#ffffff" opacity="0.8"/>
+    <text x="140" y="670" class="small" font-weight="700">PAPIER</text>
+    <text x="122" y="728" class="body">
+      <tspan x="122" dy="0">Quand les co&#251;ts sont certains et la surperformance</tspan>
+      <tspan x="122" dy="33">incertaine, l'avantage rationnel va souvent &#224; la</tspan>
+      <tspan x="122" dy="33">solution la plus simple, diversifi&#233;e et peu ch&#232;re.</tspan>
+    </text>
+    <rect x="122" y="832" width="704" height="1" fill="#aeb9c4"/>
+    <text x="122" y="866" class="source">
+      <tspan class="source-strong">The Loser's Game</tspan>
+      <tspan> - Charles D. Ellis</tspan>
+    </text>
+  </g>
+
+  <!-- Variant 4 -->
+  <g id="variant-4" class="shadow">
+    <text x="930" y="594" class="label">4. Fiche avec image haute</text>
+    <text x="1188" y="594" class="label-note">utile pour un papier central</text>
+    <rect x="930" y="616" width="780" height="300" rx="8" class="card"/>
+    <rect x="962" y="648" width="716" height="82" rx="8" class="slot"/>
+    <rect x="985" y="670" width="100" height="38" rx="4" fill="#ffffff" opacity="0.72"/>
+    <rect x="1102" y="670" width="230" height="10" rx="5" fill="#ffffff" opacity="0.82"/>
+    <rect x="1102" y="692" width="184" height="10" rx="5" fill="#ffffff" opacity="0.72"/>
+    <text x="1452" y="699" class="slot-text">image optionnelle</text>
+    <text x="962" y="771" class="eyebrow">CE QUE LE PAPIER CHANGE</text>
+    <text x="962" y="794" class="body-tight">
+      <tspan x="962" dy="0">Le bon usage du mod&#232;le n'est pas de pr&#233;dire</tspan>
+      <tspan x="962" dy="31">chaque crise, mais de construire une allocation</tspan>
+      <tspan x="962" dy="31">qui reste tenable quand la crise arrive.</tspan>
+    </text>
+    <text x="962" y="884" class="source">
+      <tspan class="source-strong">Portfolio Selection</tspan>
+      <tspan> - Harry Markowitz</tspan>
+    </text>
+  </g>
+
+  <!-- Variant 5 -->
+  <g id="variant-5" class="shadow">
+    <text x="90" y="1014" class="label">5. Citation enseignement</text>
+    <text x="342" y="1014" class="label-note">plus litt&#233;raire, sans visuel</text>
+    <rect x="90" y="1036" width="780" height="330" rx="8" class="card"/>
+    <text x="126" y="1112" class="quote">“</text>
+    <text x="180" y="1120" class="body-serif">
+      <tspan x="180" dy="0">La le&#231;on pratique est sobre :</tspan>
+      <tspan x="180" dy="39">mieux vaut organiser l'incertitude</tspan>
+      <tspan x="180" dy="39">que chercher &#224; l'annuler.</tspan>
+    </text>
+    <rect x="180" y="1249" width="456" height="1" fill="#aeb9c4"/>
+    <text x="180" y="1285" class="source">
+      <tspan class="source-strong">Asset Allocation</tspan>
+      <tspan> - Roger G. Ibbotson &amp; Paul D. Kaplan</tspan>
+    </text>
+  </g>
+
+  <!-- Variant 6 -->
+  <g id="variant-6" class="shadow">
+    <text x="930" y="1014" class="label">6. Split image large</text>
+    <text x="1134" y="1014" class="label-note">mise en avant, image &#224; droite</text>
+    <rect x="930" y="1036" width="780" height="330" rx="8" class="card"/>
+    <rect x="1450" y="1036" width="260" height="330" rx="8" fill="#e7edf2"/>
+    <rect x="1474" y="1060" width="212" height="282" rx="8" fill="url(#dots)" stroke="#9eabb7" stroke-width="1.2"/>
+    <path d="M1496 1292 C1537 1238 1575 1260 1608 1208 C1640 1158 1660 1148 1680 1107" fill="none" stroke="#1a515d" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="1608" cy="1208" r="16" class="red"/>
+    <text x="1508" y="1100" class="slot-text">visuel optionnel</text>
+    <text x="970" y="1090" class="eyebrow">ENSEIGNEMENT</text>
+    <text x="970" y="1141" class="body">
+      <tspan x="970" dy="0">La recherche devient actionnable</tspan>
+      <tspan x="970" dy="33">quand elle transforme une id&#233;e</tspan>
+      <tspan x="970" dy="33">abstraite en r&#232;gle de conduite</tspan>
+      <tspan x="970" dy="33">simple &#224; appliquer.</tspan>
+    </text>
+    <text x="970" y="1300" class="source">
+      <tspan class="source-strong">Determinants of Portfolio Performance</tspan>
+      <tspan x="970" dy="24">- Brinson, Hood &amp; Beebower</tspan>
+    </text>
+  </g>
+</svg>
