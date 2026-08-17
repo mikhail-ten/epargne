@@ -200,7 +200,7 @@ html .right-sidebar {
 	}
 }
 
-@media (min-width: 96rem) {
+@media (min-width: 80rem) {
 	html[data-has-sidebar][data-has-toc] .right-sidebar-container {
 		display: block;
 		width: max(
