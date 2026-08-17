@@ -15,7 +15,10 @@
 	--brand-paper-soft: #f7f7f7;
 	--brand-teal: #1a515d;
 	--brand-teal-soft: rgb(26 81 93 / 8%);
+	--left-sidebar-width: 22rem;
+	--right-sidebar-width: 14rem;
 	--sl-font: var(--font-body);
+	--sl-sidebar-width: var(--left-sidebar-width);
 	--sl-color-white: var(--brand-ink);
 	--sl-color-gray-1: #141414;
 	--sl-color-gray-2: var(--brand-text);
@@ -145,8 +148,85 @@ html .right-sidebar {
 	border-inline-start: 0;
 }
 
+@media (min-width: 50rem) and (max-width: 79.999rem) {
+	html[data-has-sidebar] {
+		--sl-content-inline-start: 0rem;
+	}
+
+	html[data-has-sidebar] .header {
+		padding-inline-end: calc(
+			var(--sl-nav-gap) + var(--sl-nav-pad-x) + var(--sl-menu-button-size)
+		);
+	}
+
+	html[data-has-sidebar] .main-frame {
+		padding-inline-start: 0;
+	}
+
+	html[data-has-sidebar] .sidebar-pane {
+		--sl-sidebar-visibility: hidden;
+		width: 100%;
+		background-color: var(--sl-color-black);
+	}
+
+	html[data-has-sidebar] starlight-menu-button[aria-expanded='true'] ~ .sidebar-pane {
+		--sl-sidebar-visibility: visible;
+	}
+
+	html[data-has-sidebar] starlight-menu-button button.md\:sl-hidden {
+		display: flex;
+	}
+
+	html[data-has-sidebar] #starlight__sidebar > .md\:sl-hidden {
+		display: block;
+	}
+
+	body[data-mobile-menu-expanded] {
+		overflow: hidden;
+	}
+}
+
 @media (min-width: 72rem) {
+	html[data-has-sidebar][data-has-toc] {
+		--sl-content-width: 64rem;
+	}
+
+	html[data-has-sidebar][data-has-toc] .right-sidebar-container {
+		display: none;
+	}
+
+	html[data-has-sidebar][data-has-toc] .main-pane {
+		width: 100%;
+	}
+}
+
+@media (min-width: 96rem) {
+	html[data-has-sidebar][data-has-toc] .right-sidebar-container {
+		display: block;
+		width: max(
+			var(--right-sidebar-width),
+			calc(
+				var(--right-sidebar-width) +
+					(100% - var(--sl-content-width) - var(--right-sidebar-width)) / 2
+			)
+		);
+	}
+
 	html[data-has-sidebar][data-has-toc] .right-sidebar-panel .sl-container {
-		margin-inline-start: 2rem;
+		width: calc(var(--right-sidebar-width) - 2 * var(--sl-sidebar-pad-x));
+		max-width: none;
+	}
+
+	html[data-has-sidebar][data-has-toc] .main-pane {
+		--sl-content-margin-inline: 0;
+		flex: 0 0
+			min(
+				calc(var(--sl-content-width) + var(--sl-content-pad-x) + var(--sl-content-pad-x)),
+				calc(100% - var(--right-sidebar-width))
+			);
+		width: min(
+			calc(var(--sl-content-width) + var(--sl-content-pad-x) + var(--sl-content-pad-x)),
+			calc(100% - var(--right-sidebar-width))
+		);
 	}
 }
