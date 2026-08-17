@@ -6,11 +6,37 @@ sidebar:
 ---
 
 import ResearchTeachingCard from '../../../components/ResearchTeachingCard.astro';
+import ResearchQuoteCard from '../../../components/ResearchQuoteCard.astro';
 import houston from '../../../assets/houston.webp';
+import robertShiller from '../../../assets/portraits/robert-shiller.jpg';
 
 ## Vue d'ensemble
 
 [paragraphe à rédiger]
+
+<ResearchQuoteCard
+  paper="Narrative Economics"
+  authors="Robert J. Shiller, 2017"
+  imageSrc={robertShiller.src}
+  imageAlt="Portrait de Robert J. Shiller"
+  imageCredit="Bengt Nyman, CC BY 2.0"
+  imageCreditHref="https://commons.wikimedia.org/wiki/File:Robert_J._Shiller_close-up_(cropped).jpg"
+>
+  <p>
+    This address considers the epidemiology of narratives relevant to economic
+    fluctuations. The human brain has always been highly tuned toward narratives,
+    whether factual or not, to justify ongoing actions, even such basic actions
+    as spending and investing. Stories motivate and connect activities to deeply
+    felt values and needs. Narratives “go viral” and spread far, even worldwide,
+    with economic impact. The 1920–1921 Depression, the Great Depression of the
+    1930s, the so-called Great Recession of 2007–2009, and the contentious
+    political-economic situation of today are considered as the results of the
+    popular narratives of their respective times. Though these narratives are
+    deeply human phenomena that are difficult to study in a scientific manner,
+    quantitative analysis may help us gain a better understanding of these
+    epidemics in the future.
+  </p>
+</ResearchQuoteCard>
 
 Individual investors face a search problem when buying stocks: there are thousands of possible stocks to choose from, so attention acts as a filter that first determines the choice set. Preferences then determine which stocks within that set are actually purchased. Selling does not involve the same problem because investors typically sell only stocks they already own (and most individuals do not short-sell extensively).
 As a result, individual investors tend to be net buyers of “attention-grabbing” stocks. Attention is proxied by:

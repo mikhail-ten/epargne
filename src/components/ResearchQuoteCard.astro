@@ -1,0 +1,171 @@
+---
+interface Props {
+	paper: string;
+	authors: string;
+	imageSrc?: string;
+	imageAlt?: string;
+	imageCredit?: string;
+	imageCreditHref?: string;
+}
+
+const {
+	paper,
+	authors,
+	imageSrc,
+	imageAlt = '',
+	imageCredit,
+	imageCreditHref,
+} = Astro.props;
+
+const hasImage = Boolean(imageSrc);
+---
+
+<aside class:list={['research-quote-card', { 'has-image': hasImage }]}>
+	<div class="research-quote-copy">
+		<span class="research-quote-mark" aria-hidden="true">&ldquo;</span>
+		<div class="research-quote-text">
+			<slot />
+		</div>
+		<p class="research-quote-source">
+			<span>{paper}</span>
+			<span aria-hidden="true"> - </span>
+			{authors}
+		</p>
+	</div>
+
+	{
+		hasImage && (
+			<figure class="research-quote-image">
+				<img src={imageSrc} alt={imageAlt} loading="lazy" decoding="async" />
+				{imageCredit && (
+					<figcaption>
+						{imageCreditHref ? (
+							<a href={imageCreditHref} target="_blank" rel="noreferrer">
+								{imageCredit}
+							</a>
+						) : (
+							imageCredit
+						)}
+					</figcaption>
+				)}
+			</figure>
+		)
+	}
+</aside>
+
+<style>
+	.research-quote-card {
+		--research-quote-bg: #cad3dd;
+		--research-quote-border: #aeb9c4;
+		--research-quote-ink: var(--brand-text, #262626);
+		--research-quote-muted: #4f5963;
+		--research-quote-accent: var(--brand-red, #d71b1b);
+
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		gap: clamp(1.2rem, 3vw, 2rem);
+		margin-block: 1.5rem;
+		border: 1px solid var(--research-quote-border);
+		border-radius: 0.5rem;
+		background: var(--research-quote-bg);
+		padding: clamp(1.35rem, 3vw, 2rem);
+		box-shadow: 0 0.8rem 2rem rgb(0 0 0 / 6%);
+		color: var(--research-quote-ink);
+	}
+
+	.research-quote-copy {
+		display: grid;
+		grid-template-columns: auto minmax(0, 1fr);
+		column-gap: clamp(0.7rem, 2vw, 1rem);
+		min-width: 0;
+		align-items: start;
+	}
+
+	.research-quote-mark {
+		color: var(--research-quote-accent);
+		font-family: var(--font-heading, Georgia, 'Times New Roman', serif);
+		font-size: clamp(3rem, 7vw, 5.25rem);
+		font-weight: 700;
+		line-height: 0.78;
+	}
+
+	.research-quote-text {
+		min-width: 0;
+		font-style: italic;
+		font-weight: 700;
+		text-wrap: pretty;
+	}
+
+	.research-quote-text :global(p) {
+		margin: 0;
+	}
+
+	.research-quote-text :global(p + p) {
+		margin-top: 0.8rem;
+	}
+
+	.research-quote-source {
+		grid-column: 2;
+		margin: 1rem 0 0;
+		border-top: 1px solid color-mix(in srgb, var(--research-quote-border) 82%, #ffffff);
+		padding-top: 0.9rem;
+		color: var(--research-quote-muted);
+		font-size: 0.86rem;
+		line-height: 1.45;
+	}
+
+	.research-quote-source span:first-child {
+		color: var(--research-quote-ink);
+		font-weight: 700;
+	}
+
+	.research-quote-image {
+		position: relative;
+		overflow: hidden;
+		margin: 0;
+		border: 1px solid color-mix(in srgb, var(--research-quote-border) 78%, #ffffff);
+		border-radius: 0.45rem;
+		background: rgb(255 255 255 / 42%);
+		aspect-ratio: 16 / 10;
+	}
+
+	.research-quote-image img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.research-quote-image figcaption {
+		position: absolute;
+		inset: auto 0.35rem 0.35rem auto;
+		max-width: calc(100% - 0.7rem);
+		border-radius: 0.3rem;
+		background: rgb(255 255 255 / 82%);
+		padding: 0.18rem 0.35rem;
+		color: var(--research-quote-muted);
+		font-size: 0.68rem;
+		line-height: 1.2;
+	}
+
+	.research-quote-image figcaption a {
+		color: inherit;
+		text-decoration-color: rgb(79 89 99 / 45%);
+	}
+
+	@media (min-width: 44rem) {
+		.research-quote-card.has-image {
+			grid-template-columns: minmax(0, 1fr) minmax(12rem, 32%);
+			align-items: stretch;
+		}
+
+		.research-quote-card.has-image .research-quote-image {
+			aspect-ratio: auto;
+		}
+
+		.research-quote-card.has-image .research-quote-image img {
+			position: absolute;
+			inset: 0;
+		}
+	}
+</style>
